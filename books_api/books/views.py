@@ -9,7 +9,7 @@ from .serializers import BookSerializer
 class ListCreateBookAPIView(ListCreateAPIView):
     serializer_class = BookSerializer
     queryset = Book.objects.all()
-    pagination_class = CustomPagination
+    # pagination_class = CustomPagination
     filter_backends = (filters.DjangoFilterBackend,)
     filterset_class = BookFilter
 
